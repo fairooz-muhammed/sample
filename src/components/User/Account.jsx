@@ -14,14 +14,14 @@ const Account = () => {
 
     useEffect(() => {
         if (isAuthenticated === false) {
-            navigate("/login")
+            // navigate("/login")
         }
     }, [isAuthenticated, navigate]);
 
-    const getLastName = () => {
-        const nameArray = user.name.split(" ");
-        return nameArray[nameArray.length - 1];
-    }
+    // const getLastName = () => {
+    //     const nameArray = user.name.split(" ");
+    //     return nameArray[nameArray.length - 1];
+    // }
 
     return (
         <>
@@ -48,11 +48,11 @@ const Account = () => {
                                         <div className="flex flex-col sm:flex-row items-center gap-3" id="personalInputs">
                                             <div className="flex flex-col gap-0.5 w-64 px-3 py-1.5 rounded-sm border inputs cursor-not-allowed bg-gray-100 focus-within:border-primary-blue">
                                                 <label className="text-xs text-gray-500">First Name</label>
-                                                <input type="text" value={user.name.split(" ", 1)} className="text-sm outline-none border-none cursor-not-allowed text-gray-500" disabled />
+                                                <input type="text" value={user?.name && user?.name.split(" ", 1)} className="text-sm outline-none border-none cursor-not-allowed text-gray-500" disabled />
                                             </div>
                                             <div className="flex flex-col gap-0.5 w-64 px-3 py-1.5 rounded-sm border inputs cursor-not-allowed bg-gray-100 focus-within:border-primary-blue">
                                                 <label className="text-xs text-gray-500">Last Name</label>
-                                                <input type="text" value={getLastName()} className="text-sm outline-none border-none cursor-not-allowed text-gray-500" disabled />
+                                                {/* <input type="text" value={getLastName()} className="text-sm outline-none border-none cursor-not-allowed text-gray-500" disabled /> */}
                                             </div>
                                         </div>
 
@@ -65,7 +65,7 @@ const Account = () => {
                                                     <label htmlFor="male" className="cursor-not-allowed">Male</label>
                                                 </div>
                                                 <div className="flex items-center gap-4 inputs text-gray-500 cursor-not-allowed">
-                                                    <input type="radio" name="gender" checked={user.gender === "female"} id="female" className="h-4 w-4 cursor-not-allowed" disabled />
+                                                    <input type="radio" name="gender" checked={user?.gender === "female"} id="female" className="h-4 w-4 cursor-not-allowed" disabled />
                                                     <label htmlFor="female" className="cursor-not-allowed">Female</label>
                                                 </div>
                                             </div>
@@ -85,7 +85,7 @@ const Account = () => {
                                         <div className="flex items-center gap-3">
                                             <div className="flex flex-col gap-0.5 sm:w-64 px-3 py-1.5 rounded-sm border bg-gray-100 cursor-not-allowed focus-within:border-primary-blue">
                                                 <label className="text-xs text-gray-500">Email Address</label>
-                                                <input type="email" value={user.email} className="text-sm outline-none border-none cursor-not-allowed text-gray-500" disabled />
+                                                <input type="email" value={user?.email} className="text-sm outline-none border-none cursor-not-allowed text-gray-500" disabled />
                                             </div>
                                         </div>
 

@@ -33,17 +33,43 @@ import {
     SLIDER_PRODUCTS_FAIL,
 } from "../constants/productConstants";
 
+const sampleProductJson = {
+  "status": "success",
+  "data": [
+    {
+      "product_id": 1,
+      "product_name": "Wireless Mouse",
+      "p_category": 2,
+      "p_subcategory": 5,
+      "p_details": "A wireless mouse with ergonomic design.",
+      "p_category_name": "Electronics",
+      "p_subcategory_name": "Computer Accessories"
+    },
+    {
+      "product_id": 2,
+      "product_name": "Gaming Laptop",
+      "p_category": 2,
+      "p_subcategory": 4,
+      "p_details": "High performance gaming laptop.",
+      "p_category_name": "Electronics",
+      "p_subcategory_name": "Laptops"
+    }
+    // ... more product entries
+  ]
+}
+
 // Get All Products --- Filter/Search/Sort
 export const getProducts =
-    (keyword = "", category, price = [0, 200000], ratings = 0, currentPage = 1) => async (dispatch) => {
+    ( search = '',cat_id = "", sub_cat_id = '', product_id = '') => async (dispatch) => {
         try {
             dispatch({ type: ALL_PRODUCTS_REQUEST });
 
-            let url = `/api/v1/products?keyword=${keyword}&price[gte]=${price[0]}&price[lte]=${price[1]}&ratings[gte]=${ratings}&page=${currentPage}`;
-            if (category) {
-                url = `/api/v1/products?keyword=${keyword}&category=${category}&price[gte]=${price[0]}&price[lte]=${price[1]}&ratings[gte]=${ratings}&page=${currentPage}`;
-            }
-            const { data } = await axios.get(url);
+            let url = `/api/products?cat_id=${cat_id}&sub_cat_id =${sub_cat_id}&search=${search}&product_id =${product_id}`;
+
+            // const { data } = await axios.get(url);
+            const data = sampleProductJson.data || [];
+            console.log("datadatadata",data);
+            
 
             dispatch({
                 type: ALL_PRODUCTS_SUCCESS,
@@ -119,8 +145,10 @@ export const getSliderProducts = () => async (dispatch) => {
     try {
         dispatch({ type: SLIDER_PRODUCTS_REQUEST });
 
-        // const { data } = await axios.get('/api/v1/products/all');
+        const { data } = await axios.get('/api/v1/products/all');
 
+        console.log("dsffdsfdsfdfdsfsdfdsf",data);
+        
         dispatch({
             type: SLIDER_PRODUCTS_SUCCESS,
             payload: [] ,

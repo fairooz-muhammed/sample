@@ -25,9 +25,9 @@ const MainData = () => {
     });
 
     useEffect(() => {
-        dispatch(getAdminProducts());
-        dispatch(getAllOrders());
-        dispatch(getAllUsers());
+        // dispatch(getAdminProducts());
+        // dispatch(getAllOrders());
+        // dispatch(getAllUsers());
     }, [dispatch]);
 
     let totalAmount = orders?.reduce((total, order) => total + order.totalPrice, 0);

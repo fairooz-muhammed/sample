@@ -51,13 +51,20 @@ const Products = () => {
         setRatings(0);
     }
 
+    useEffect(()=>{
+        console.log("============================");
+        console.log("============================");
+        console.log("============================",products);
+        
+    },[products])
+
     useEffect(() => {
         if (error) {
             enqueueSnackbar(error, { variant: "error" });
             dispatch(clearErrors());
         }
-        dispatch(getProducts(keyword, category, price, ratings, currentPage));
-    }, [dispatch, keyword, category, price, ratings, currentPage, error, enqueueSnackbar]);
+        dispatch(getProducts(keyword, category, price, currentPage));
+    }, [dispatch, keyword, category, price, currentPage, error, enqueueSnackbar]);
 
     return (
         <>
@@ -107,15 +114,15 @@ const Products = () => {
                                 {/* category filter */}
                                 <div className="flex flex-col border-b px-4">
 
-                                    <div className="flex justify-between cursor-pointer py-2 pb-4 items-center" onClick={() => setCategoryToggle(!categoryToggle)}>
+                                    {/* <div className="flex justify-between cursor-pointer py-2 pb-4 items-center" onClick={() => setCategoryToggle(!categoryToggle)}>
                                         <p className="font-medium text-xs uppercase">Category</p>
                                         {categoryToggle ?
                                             <ExpandLessIcon sx={{ fontSize: "20px" }} /> :
                                             <ExpandMoreIcon sx={{ fontSize: "20px" }} />
                                         }
-                                    </div>
+                                    </div> */}
 
-                                    {categoryToggle && (
+                                    {/* {categoryToggle && (
                                         <div className="flex flex-col pb-1">
                                             <FormControl>
                                                 <RadioGroup
@@ -130,7 +137,7 @@ const Products = () => {
                                                 </RadioGroup>
                                             </FormControl>
                                         </div>
-                                    )}
+                                    )} */}
 
                                 </div>
                                 {/* category filter */}
@@ -190,7 +197,7 @@ const Products = () => {
 
                                 <div className="grid grid-cols-1 sm:grid-cols-4 w-full place-content-start overflow-hidden pb-4 border-b">
                                     {products?.map((product) => (
-                                            <Product {...product} key={product._id} />
+                                            <Product {...product} key={product.product_id} />
                                         ))
                                     }
                                 </div>
