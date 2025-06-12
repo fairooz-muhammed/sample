@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/sample/static/css/main.46962a82.css",
-    "main.js": "/sample/static/js/main.3da4a194.js",
+    "main.css": "/sample/static/css/main.988f89ca.css",
+    "main.js": "/sample/static/js/main.ac664c4b.js",
+    "static/media/logo.png": "/sample/static/media/logo.7b45463b3decb413fe0a.png",
     "static/media/payment-methods.svg": "/sample/static/media/payment-methods.69e7ec34d1302e6b58b2cb1abe6b2f9c.svg",
     "static/media/404-not-found.svg": "/sample/static/media/404-not-found.f58b723c5e420e43683574327be5529a.svg",
     "static/media/furniture.png": "/sample/static/media/furniture.c167da994e4cf873c7f5.png",
@@ -16,7 +17,6 @@
     "static/media/grocery.png": "/sample/static/media/grocery.b684d799acd0d0375626.png",
     "static/media/home.png": "/sample/static/media/home.eb7132924aab6919441b.png",
     "static/media/beauty.png": "/sample/static/media/beauty.7d66ddbcf545e947bd6b.png",
-    "static/media/logo.png": "/sample/static/media/logo.3b0baaaf50ed860dcc7a.png",
     "static/media/electronics.png": "/sample/static/media/electronics.c3245fc5e6c095785d94.png",
     "static/media/realme-9-pro.webp": "/sample/static/media/realme-9-pro.5a99ab97f9f4b611aadc.webp",
     "static/media/oppo-reno7.webp": "/sample/static/media/oppo-reno7.dedadaebb21cf2bb2137.webp",
@@ -29,7 +29,7 @@
     "index.html": "/sample/index.html"
   },
   "entrypoints": [
-    "static/css/main.46962a82.css",
-    "static/js/main.3da4a194.js"
+    "static/css/main.988f89ca.css",
+    "static/js/main.ac664c4b.js"
   ]
 }
