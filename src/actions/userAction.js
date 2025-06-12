@@ -82,7 +82,7 @@ export const registerUser = (userData) => async (dispatch) => {
         }
 
         const { data } = await axios.post(
-            '/api/v1/register',
+            'http://localhost:4000/api/v1/register',
             userData,
             config
         );
@@ -106,12 +106,11 @@ export const loadUser = () => async (dispatch) => {
 
         dispatch({ type: LOAD_USER_REQUEST });
 
-        // const { data } = await axios.get('/api/v1/me');
+        const { data } = await axios.get('http://localhost:4000/api/v1/me');
 
         dispatch({
             type: LOAD_USER_SUCCESS,
-            payload: '',
-            // payload: data.user,
+            payload: data?.user || 'admin',
         });
 
     } catch (error) {

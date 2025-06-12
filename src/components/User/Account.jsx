@@ -14,7 +14,7 @@ const Account = () => {
 
     useEffect(() => {
         if (isAuthenticated === false) {
-            // navigate("/login")
+            navigate("/login")
         }
     }, [isAuthenticated, navigate]);
 
