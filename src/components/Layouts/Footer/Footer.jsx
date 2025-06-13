@@ -12,11 +12,11 @@ const footerLinks = [
     links: [
       {
         name: "Contact Us",
-        redirect: "https://www.flipkart.com/helpcentre",
+        // redirect: "https://www.flipkart.com/helpcentre",
       },
       {
         name: "About Us",
-        redirect: "https://www.flipkart.com/about-us",
+        // redirect: "https://www.flipkart.com/about-us",
       },
       // {
       //   name: "Careers",
@@ -95,7 +95,7 @@ const footerLinks = [
     links: [
       {
         name: "Facebook",
-        redirect: "https://www.facebook.com/flipkart",
+        // redirect: "https://www.facebook.com/flipkart",
       },
       // {
       //   name: "Twitter",

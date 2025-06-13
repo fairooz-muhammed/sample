@@ -265,7 +265,7 @@ const ProductDetails = () => {
 
                                     {/* <!-- flipkart plus banner --> */}
                                     <div className="sm:w-1/2 mt-4 border">
-                                        <img draggable="false" className="w-full h-full object-contain" src="https://rukminim1.flixcart.com/lockin/763/305/images/promotion_banner_v2_active.png" alt="" />
+                                        {/* <img draggable="false" className="w-full h-full object-contain" src="https://rukminim1.flixcart.com/lockin/763/305/images/promotion_banner_v2_active.png" alt="" /> */}
                                     </div>
                                     {/* <!-- flipkart plus banner --> */}
 

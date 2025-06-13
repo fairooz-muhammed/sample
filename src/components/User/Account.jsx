@@ -132,7 +132,7 @@ const Account = () => {
                                 </div>
                                 {/* <!-- edit info container --> */}
 
-                                <img draggable="false" className="w-full object-contain" src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/myProfileFooter_4e9fe2.png" alt="footer" />
+                                {/* <img draggable="false" className="w-full object-contain" src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/myProfileFooter_4e9fe2.png" alt="footer" /> */}
                             </div>
                             {/* <!-- details column --> */}
                         </div>

@@ -68,7 +68,7 @@ const Payment = () => {
             );
 
             let info = {
-                action: "https://securegw-stage.paytm.in/order/process",
+                action: "",
                 params: data.paytmParams
             }
 
@@ -155,7 +155,7 @@ const Payment = () => {
                                                 control={<Radio />}
                                                 label={
                                                     <div className="flex items-center gap-4">
-                                                        <img draggable="false" className="h-6 w-6 object-contain" src="https://rukminim1.flixcart.com/www/96/96/promos/01/09/2020/a07396d4-0543-4b19-8406-b9fcbf5fd735.png" alt="Paytm Logo" />
+                                                        {/* <img draggable="false" className="h-6 w-6 object-contain" src="https://rukminim1.flixcart.com/www/96/96/promos/01/09/2020/a07396d4-0543-4b19-8406-b9fcbf5fd735.png" alt="Paytm Logo" /> */}
                                                         <span>Paytm</span>
                                                     </div>
                                                 }
