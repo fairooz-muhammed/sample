@@ -377,7 +377,7 @@ const ProductDetails = () => {
 
                         {/* Sliders */}
                         <div className="flex flex-col gap-3 mt-6">
-                            <ProductSlider title={"Similar Products"} tagline={"Based on the category"} />
+                            {/* <ProductSlider title={"Similar Products"} tagline={"Based on the category"} /> */}
                         </div>
 
                     </main>

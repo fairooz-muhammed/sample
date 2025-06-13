@@ -58,13 +58,14 @@ const sampleProductJson = {
   ]
 }
 
+const COMMON_ENDPOINT = 'https://jo-works.in/dentakart/api'
 // Get All Products --- Filter/Search/Sort
 export const getProducts =
     ( search = '',cat_id = "", sub_cat_id = '', product_id = '') => async (dispatch) => {
         try {
             dispatch({ type: ALL_PRODUCTS_REQUEST });
 
-            let url = `https://jo-works.in/dentakart/api/products`;
+            let url = `${COMMON_ENDPOINT}/products`;
             // let url = `/api/products?cat_id=${cat_id}&sub_cat_id =${sub_cat_id}&search=${search}&product_id =${product_id}`;
 
             const { data } = await axios.get(url);
@@ -108,7 +109,7 @@ export const getProductDetails = (id) => async (dispatch) => {
     try {
         dispatch({ type: PRODUCT_DETAILS_REQUEST });
 
-        const { data } = await axios.get(`/api/v1/product/${id}`);
+        const { data } = await axios.get(`${COMMON_ENDPOINT}/api/v1/product/${id}`);
 
         dispatch({
             type: PRODUCT_DETAILS_SUCCESS,
