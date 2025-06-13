@@ -64,16 +64,17 @@ export const getProducts =
         try {
             dispatch({ type: ALL_PRODUCTS_REQUEST });
 
-            let url = `/api/products?cat_id=${cat_id}&sub_cat_id =${sub_cat_id}&search=${search}&product_id =${product_id}`;
+            let url = `https://jo-works.in/dentakart/api/products`;
+            // let url = `/api/products?cat_id=${cat_id}&sub_cat_id =${sub_cat_id}&search=${search}&product_id =${product_id}`;
 
-            // const { data } = await axios.get(url);
-            const data = sampleProductJson.data || [];
-            console.log("datadatadata",data);
+            const { data } = await axios.get(url);
+            // const data = sampleProductJson.data || [];
+            console.log("datadatadata",data.data);
             
 
             dispatch({
                 type: ALL_PRODUCTS_SUCCESS,
-                payload: data,
+                payload: data.data,
             });
         } catch (error) {
             dispatch({
@@ -151,8 +152,8 @@ export const getSliderProducts = () => async (dispatch) => {
         
         dispatch({
             type: SLIDER_PRODUCTS_SUCCESS,
-            payload: [] ,
-            // payload: data.products ,
+            // payload: [] ,
+            payload: data.products ,
         });
     } catch (error) {
         dispatch({

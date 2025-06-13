@@ -46,12 +46,12 @@ export const productsReducer = (state = { products: [] }, { type, payload }) => 
         case SLIDER_PRODUCTS_REQUEST:
             return {
                 loading: true,
-                products: [],
+                products: payload,
             };
         case ALL_PRODUCTS_SUCCESS:
             return {
                 loading: false,
-                products: payload.products,
+                products: payload,
                 productsCount: payload.productsCount,
                 resultPerPage: payload.resultPerPage,
                 filteredProductsCount: payload.filteredProductsCount,
